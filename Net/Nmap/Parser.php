@@ -71,7 +71,7 @@ class Net_Nmap_Parser extends XML_Parser
     {
         switch ($name) {
         case 'nmaprun':
-            if (isset($this->_stats)) {
+            if (!isset($this->_stats)) {
                 $this->_stats = new Net_Nmap_Stats();
             }
             $this->_stats->scanner = @$attribs['scanner'];
