@@ -67,7 +67,7 @@ class Net_Nmap_Parser extends XML_Parser
      *
      * @return void
      */
-    public function startHandler($parser, $name, $attribs)
+    public function startHandler($parser, $name, &$attribs)
     {
         switch ($name) {
         case 'nmaprun':
